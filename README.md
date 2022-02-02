@@ -6,6 +6,40 @@ If you work on more than one feature at a time, you are guaranteed to multiply y
 
 ## Making a plan
 
+I) Elements
+  A) Banner div
+  div
+    B) HP display div
+      1) p - "fighter hp"
+      2) p - hp.textContent
+    C) Create potato div
+      1) form
+      2) submit on click
+  div 'field of battle'
+    D) Fighter image
+    E) Div for potatoes
+      1) Individual potato div
+        a) Potato image
+        b) Potato name
+          -Papa Cabeza
+        c) Potato HP
+      2) Individual div
+        a) Potato image
+        b) Potato name
+          -Frau Kartoffelkopf
+        c) Potato HP
+      3) Dynamic div (created w/ js)
+        a) Potato image
+        b) Potato name
+          -from form
+        c) Potato HP
+  F) Defeated div
+    1) text 'you've french fried ${defeated potatoes} potatoes'
+II) State
+III) Events
+IV) Functionality
+V) Plan
+
 1) **Make a drawing of your app. Simple "wireframes"**
 1) **Once you have a drawing, name the HTML elements you'll need to realize your vision**
 1) **For each HTML element ask: Why do I need this? (i.e., "we need div to display the results in")** 
