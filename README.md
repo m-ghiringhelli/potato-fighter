@@ -36,9 +36,46 @@ I) Elements
   F) Defeated div
     1) text 'you've french fried ${defeated potatoes} potatoes'
 II) State
+  A) Player HP
+  B) Defeated potatoes
+  C) Potato HP
+  D) Array of potato objects
 III) Events
+  A) Create potato (form)
+    1) renderPotato
+      a) create div formatted like potato
+    2) displayPotatoes()
+      b) append to DOM
+  B) Click on potato (potatoClickHandler())
+    1) You try to hit potato
+      a) Math.random to see if you hit
+      b) Display (alert) whether you hit
+      c) If hit, change potato HP state
+      d) On miss, alert user
+    2) Potato tries to hit you
+      a) Math.random to see if potato hits
+      b) Display (alert) whether potato hit
+      c) If hit, change user HP state
+      d) On miss, alert user
+    3) Potato dies (if HP reaches 0)
+      a) Alert user potato is dead
+      b) Make potato die (disappear - display: none?), show french fries
+      c) Update defeated potatoes state
+      d) Change display of defeated potatoes
+    4) User dies (hp === 0)
+      a) new image? or just rotate
+      b) alert user (you lost)
 IV) Functionality
+  A) renderPotato(potato) - PURE - returns DOM potato
+  B) displayPotatoes() - clear DOM and append potatoes to potato list
+  C) potatoClickHandler() function
 V) Plan
+  A) Basic HTML structure
+  B) Style just enough to see layout
+  C) test renderPotato function
+  D) displayPotatoes function
+  E) potato click handler
+  F) Finish styling
 
 1) **Make a drawing of your app. Simple "wireframes"**
 1) **Once you have a drawing, name the HTML elements you'll need to realize your vision**
