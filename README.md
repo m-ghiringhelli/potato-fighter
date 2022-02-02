@@ -7,15 +7,15 @@ If you work on more than one feature at a time, you are guaranteed to multiply y
 ## Making a plan
 
 I) Elements
-  A) Banner div
-  div
-    B) HP display div
+  A) Banner div CHECK
+  div CHECK
+    B) HP display div CHECK
       1) p - "fighter hp"
       2) p - hp.textContent
-    C) Create potato div
+    C) Create potato div  CHECK
       1) form
       2) submit on click
-  div 'field of battle'
+  div 'field of battle' CHECK
     D) Fighter image
     E) Div for potatoes
       1) Individual potato div

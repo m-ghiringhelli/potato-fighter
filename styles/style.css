@@ -8,20 +8,6 @@ body {
     --color4: white;
     --color5: white;
     
-    /* https://coolors.co/generate and click export -> scss to get the colors to copy and paste below*/
-        
-    /* --color1: hsla(349, 69%, 76%, 1);
-    --color2: hsla(207, 67%, 44%, 1);
-    --color3: hsla(200, 61%, 56%, 1);
-    --color4: hsla(187, 41%, 94%, 1);
-    --color5: hsla(170, 28%, 95%, 1); */
-
-    /* --color1: hsla(45, 86%, 83%, 1);
-    --color2: hsla(135, 65%, 98%, 1);
-    --color3: hsla(315, 37%, 86%, 1);
-    --color4: hsla(45, 73%, 98%, 1);
-    --color5: hsla(224, 40%, 79%, 1); */
-    
     --header-height: 80px;
     --shadow: 0px 10px 20px -12px rgba(0,0,0,0.45);
     --gutter: 30px;
@@ -37,11 +23,11 @@ main {
     justify-content: center;
     align-items: center;
     margin-bottom: calc(var(--footer-height));
+    width: 100%;
 }
 
 section {
     background-color: var(--color5);
-    max-width: 80%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -61,6 +47,64 @@ header {
     box-shadow: var(--shadow);
 }
 
+.banner {
+    background-color: lightpink;
+    width: 80%;
+    height: 100px;
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+}
+
+#above-battle {
+    background-color: lightsteelblue;
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px;
+}
+
+#user-hp-container {
+    height: 90%;
+    width: 20%;
+    background-color: linen;
+    margin: 0px 20px;
+}
+
+#create-potato-container {
+    height: 90%;
+    width: 20%;
+    background-color: linen;
+    margin: 0px 20px;
+}
+
+.field-of-battle {
+    background-color: moccasin;
+    height: 300px;
+    width: 100%;
+    margin: 0px;
+    border: 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#fighter {
+    background-color: paleturquoise;
+    width: 20%;
+    height: 95%;
+    margin: 0px 100px;
+}
+
+#potatoes-container {
+    background-color: powderblue;
+    height: 95%;
+}
 
 h2 {
     font-size: 1.8rem;
