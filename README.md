@@ -17,7 +17,7 @@ I) Elements
       2) submit on click
   div 'field of battle' CHECK
     D) Fighter image
-    E) Div for potatoes
+    E) Div for potatoes CHECK
       1) Individual potato div
         a) Potato image
         b) Potato name
