@@ -3,6 +3,7 @@ import { renderPotato } from './test/utils.js';
 
 const playerHPEl = document.getElementById('player-HP');
 const form = document.getElementById('create-potato-form');
+const potatoInput = document.getElementById('potato-opponent-input');
 const potatoContainer = document.getElementById('potatoes-container');
 const defeatedPotatoesEl = document.getElementById('defeated-potatoes-display');
 const createPotatoEl = document.getElementById('create-potato-container');
@@ -37,7 +38,19 @@ for (let potato of potatoList) {
 defeatedPotatoesEl.textContent = `You've french-fried ${frenchFriedPotatoes} potatoes!`;
 
 // set event listeners 
+createPotatoEl.addEventListener('submit', (e) => {
+    createPotatoObject(e);
+});
+
 createPotatoEl.addEventListener('click', (e) => {
+    createPotatoObject(e);
+});
+
+potatoInput.addEventListener('click', () => {
+    potatoInput.value = '';
+});
+
+function createPotatoObject(e) {
     e.preventDefault();
     if (e.target === e.currentTarget) {
         const formData = new FormData(form);
@@ -49,7 +62,7 @@ createPotatoEl.addEventListener('click', (e) => {
         potatoIds++;
         console.log('potatoIds', potato);
     }
-});
+}
   // get user input
   // use user input to update state 
   // update DOM to reflect the new state
