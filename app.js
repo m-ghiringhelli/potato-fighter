@@ -39,14 +39,16 @@ defeatedPotatoesEl.textContent = `You've french-fried ${frenchFriedPotatoes} pot
 // set event listeners 
 createPotatoEl.addEventListener('click', (e) => {
     e.preventDefault();
-    const formData = new FormData(form);
-    const potato = {
-        id: potatoIds,
-        name: formData.get('potato-opponent-input'),
-        hp: Math.ceil(Math.random() * 20),
-    };
-    potatoIds++;
-    console.log('potatoIds', potato);
+    if (e.target === e.currentTarget) {
+        const formData = new FormData(form);
+        const potato = {
+            id: potatoIds,
+            name: formData.get('potato-name'),
+            hp: Math.ceil(Math.random() * 20),
+        };
+        potatoIds++;
+        console.log('potatoIds', potato);
+    }
 });
   // get user input
   // use user input to update state 
