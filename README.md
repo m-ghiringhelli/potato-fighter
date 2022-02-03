@@ -36,14 +36,14 @@ I) Elements
   F) Defeated div
     1) text 'you've french fried ${defeated potatoes} potatoes' CHECK
 II) State
-  A) Player HP
-  B) Defeated potatoes
-  C) Potato HP
-  D) Array of potato objects
+  A) Player HP CHECK
+  B) Defeated potatoes CHECK
+  C) Potato HP CHECK
+  D) Array of potato objects CHECK
 III) Events
   A) Create potato (form)
-    1) renderPotato
-      a) create div formatted like potato
+    1) renderPotatoes
+      a) create div formatted like potato CHECK
     2) displayPotatoes()
       b) append to DOM
   B) Click on potato (potatoClickHandler())
@@ -66,13 +66,13 @@ III) Events
       a) new image? or just rotate
       b) alert user (you lost)
 IV) Functionality
-  A) renderPotato(potato) - PURE - returns DOM potato
+  A) renderPotato(potato) - PURE - returns DOM potato CHECK
   B) displayPotatoes() - clear DOM and append potatoes to potato list
   C) potatoClickHandler() function
 V) Plan
   A) Basic HTML structure CHECK
   B) Style just enough to see layout CHECK
-  C) test renderPotato function
+  C) test renderPotato function CHECK
   D) displayPotatoes function
   E) potato click handler
   F) Finish styling

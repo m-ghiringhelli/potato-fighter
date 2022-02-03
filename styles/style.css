@@ -85,6 +85,10 @@ p {
     justify-content: center;
 }
 
+#player-HP {
+    font-size: 3.2rem;
+}
+
 #create-potato-container {
     height: 90%;
     width: 20%;
