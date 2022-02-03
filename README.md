@@ -10,23 +10,23 @@ I) Elements
   A) Banner div CHECK
   div CHECK
     B) HP display div CHECK
-      1) p - "fighter hp"
+      1) p - "fighter hp" CHECK
       2) p - hp.textContent
     C) Create potato div  CHECK
-      1) form
+      1) form CHECK
       2) submit on click
   div 'field of battle' CHECK
-    D) Fighter image
+    D) Fighter image CHECK
     E) Div for potatoes CHECK
-      1) Individual potato div
-        a) Potato image
-        b) Potato name
-          -Papa Cabeza
-        c) Potato HP
-      2) Individual div
-        a) Potato image
-        b) Potato name
-          -Frau Kartoffelkopf
+      1) Individual potato div CHECK
+        a) Potato image CHECK
+        b) Potato name CHECK
+          -Papa Cabeza CHECK
+        c) Potato HP 
+      2) Individual div CHECK
+        a) Potato image CHECK
+        b) Potato name CHECK
+          -Frau Kartoffelkopf CHECK
         c) Potato HP
       3) Dynamic div (created w/ js)
         a) Potato image
@@ -34,7 +34,7 @@ I) Elements
           -from form
         c) Potato HP
   F) Defeated div
-    1) text 'you've french fried ${defeated potatoes} potatoes'
+    1) text 'you've french fried ${defeated potatoes} potatoes' CHECK
 II) State
   A) Player HP
   B) Defeated potatoes
@@ -70,8 +70,8 @@ IV) Functionality
   B) displayPotatoes() - clear DOM and append potatoes to potato list
   C) potatoClickHandler() function
 V) Plan
-  A) Basic HTML structure
-  B) Style just enough to see layout
+  A) Basic HTML structure CHECK
+  B) Style just enough to see layout CHECK
   C) test renderPotato function
   D) displayPotatoes function
   E) potato click handler

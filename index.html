@@ -19,12 +19,19 @@
         </div>
         <div id="above-battle">
             <div id="user-hp-container">
+                Your HP:
             </div>
             <div id="create-potato-container">
+                <p>Create a potato to fight:</p>
+                <form>
+                    <input type="text" value="Name your opponent" id="potato-opponent-input">
+                </form>
             </div>
         </div>
         <section class="field-of-battle">
-            <div id="fighter"></div>
+            <div id="fighter">
+                <img src="./assets/chef.png" id="chef-image">
+            </div>
             <div id="potatoes-container">
                 <div class="potato" id="potato-1">
                     <p>PAPA CABEZA</p>
@@ -38,6 +45,9 @@
                 </div>
             </div>
         </section>
+        <div id="defeated-potatoes">
+            You've french-fried <span></span> potatoes!
+        </div>
     </main>
     <script type="module" src="./app.js"></script>
 </body>
