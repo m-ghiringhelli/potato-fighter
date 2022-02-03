@@ -45,11 +45,13 @@ potatoInput.addEventListener('click', () => {
 // on form submit creates potato
 createPotatoEl.addEventListener('submit', (e) => {
     e.preventDefault();
-    createPotatoObject();
+    // createPotatoObject();
+    displayPotatoes(createPotatoObject());
 });
 // on div click creates potato
 createPotatoEl.addEventListener('click', (e) => {
     divCreatesPotatoObject(e);
+    // displayPotatoes(createPotatoObject());
 });
 
 function createPotatoObject() {
@@ -67,6 +69,7 @@ function divCreatesPotatoObject(e) {
     e.preventDefault();
     if (e.target === e.currentTarget) {
         createPotatoObject();
+        displayPotatoes(createPotatoObject());
     }
 }
 
