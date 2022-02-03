@@ -2,7 +2,9 @@
 import { renderPotato } from './test/utils.js';
 
 const playerHPEl = document.getElementById('player-HP');
+const potatoContainer = document.getElementById('potatoes-container');
 const defeatedPotatoesEl = document.getElementById('defeated-potatoes-display');
+
 // let state
 let potatoList = [
     {
@@ -18,8 +20,15 @@ let potatoList = [
 ];
 let playerHP = 10;
 let frenchFriedPotatoes = 0;
-
+//display player HP
 playerHPEl.textContent = playerHP;
+
+function renderPotatoes(potatoObject) {
+    potatoContainer.append(renderPotato(potatoObject));
+}
+
+renderPotatoes(potatoList[0]);
+renderPotatoes(potatoList[1]);
 
 defeatedPotatoesEl.textContent = `You've french-fried ${frenchFriedPotatoes} potatoes!`;
 
