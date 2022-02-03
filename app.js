@@ -37,32 +37,39 @@ for (let potato of potatoList) {
 //display number of defeated potatoes
 defeatedPotatoesEl.textContent = `You've french-fried ${frenchFriedPotatoes} potatoes!`;
 
-// set event listeners 
-createPotatoEl.addEventListener('submit', (e) => {
-    createPotatoObject(e);
-});
-
-createPotatoEl.addEventListener('click', (e) => {
-    createPotatoObject(e);
-});
-
+// set event listeners
+// on user click, input clears
 potatoInput.addEventListener('click', () => {
     potatoInput.value = '';
 });
+// on form submit creates potato
+createPotatoEl.addEventListener('submit', (e) => {
+    e.preventDefault();
+    createPotatoObject();
+});
+// on div click creates potato
+createPotatoEl.addEventListener('click', (e) => {
+    divCreatesPotatoObject(e);
+});
 
-function createPotatoObject(e) {
+function createPotatoObject() {
+    const formData = new FormData(form);
+    const potato = {
+        id: potatoIds,
+        name: formData.get('potato-name'),
+        hp: Math.ceil(Math.random() * 20),
+    };
+    potatoIds++;
+    return potato;
+}
+// clicking in div (but not input) creates potato
+function divCreatesPotatoObject(e) {
     e.preventDefault();
     if (e.target === e.currentTarget) {
-        const formData = new FormData(form);
-        const potato = {
-            id: potatoIds,
-            name: formData.get('potato-name'),
-            hp: Math.ceil(Math.random() * 20),
-        };
-        potatoIds++;
-        console.log('potatoIds', potato);
+        createPotatoObject();
     }
 }
+
   // get user input
   // use user input to update state 
   // update DOM to reflect the new state
