@@ -42,7 +42,7 @@ II) State
   D) Array of potato objects CHECK
 III) Events
   A) Create potato (form)
-    1) renderPotatoes
+    1) renderPotatoes CHECK
       a) create div formatted like potato CHECK
     2) displayPotatoes()
       b) append to DOM
