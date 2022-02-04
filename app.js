@@ -37,6 +37,7 @@ function displayPotatoes() {
         const potatoEl = renderPotato(potato);
         if (potato.hp < 1) {
             potatoEl.childNodes[1].src = './assets/fries.png';
+            potatoEl.lastChild.textContent = '0 HP';
         }
         // create event listener
         potatoEl.addEventListener('click', () => {
@@ -78,7 +79,7 @@ function createPotatoObject() {
 }
 
 function potatoClickHandler(poData) {
-    if (poData.hp < 0) return;
+    if (poData.hp < 1) return;
     // you try to hit potato
     if (Math.random() < 0.7) {
         alert(`You mashed ${poData.name}!`);
@@ -99,7 +100,6 @@ function potatoClickHandler(poData) {
         frenchFriedPotatoes++;
         defeatedPotatoesEl.textContent = `You've french-fried ${frenchFriedPotatoes} potatoes!`;
     }
-    // Make potato die (disapper?), show french fries
     // Change display of defeated potatoes
     // User dies (hp === 0)
     if (playerHP < 1) {
