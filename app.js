@@ -73,4 +73,27 @@ function createPotatoObject() {
     potatoList.push(potato);
 }
 
+function potatoClickHandler(poData) {
+// you try to hit potato
+    if (Math.random() < 0.7) {
+        alert(`You mashed ${poData.name}!`);
+        poData.hp -= Math.ceil(Math.random() * 4);
+    } else alert(`You missed ${poData.name}!`);
+    // If hit, change potato HP state
+    // On miss, alert user
+// potato tries to hit you
+    // Math.random to see if potato hits
+    // Display (alert) whether potato hits
+    // If hit, change user HP state
+    // On miss, alert user
+// Potato dies (if HP reaches 0)
+    // Alert user potato is dead
+    // Make potato die (disapper?), show french fries
+    // Update defeated potato state
+    // Change display of defeated potatoes
+// User dies (hp === 0) 
+    // Rotate image
+    // Alert user (you lost)
+}
+
 displayPotatoes();
