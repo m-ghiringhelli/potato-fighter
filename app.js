@@ -12,9 +12,9 @@ const fighterImageEl = document.getElementById('fighter');
 // let state
 let potatoList = [
     {
-        id: 10,
+        id: 1,
         name: 'Papa Cabeza',
-        hp: 1
+        hp: 10
     },
     {
         id: 2,
@@ -26,7 +26,6 @@ let playerHP = 10;
 let frenchFriedPotatoes = 0;
 let potatoIds = 3;
 let gameOver = false;
-console.log(gameOver);
 // display player HP
 playerHPEl.textContent = playerHP;
 // display number of defeated potatoes
@@ -64,7 +63,10 @@ createPotatoEl.addEventListener('submit', (e) => {
 // on div click creates potato
 createPotatoEl.addEventListener('click', (e) => {
     e.preventDefault();
-    if (gameOver) return;
+    if (gameOver) {
+        alert('GAME OVER');
+        return;
+    }
     if (e.target === e.currentTarget) {
         createPotatoObject();
         displayPotatoes();

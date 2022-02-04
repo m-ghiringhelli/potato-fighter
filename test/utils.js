@@ -5,7 +5,11 @@ export function renderPotato(potatoObject) {
     div.id = `potato-${potatoObject.id}`;
     //create name
     const p = document.createElement('p');
-    p.textContent = `${potatoObject.name}`.toUpperCase();
+    if (potatoObject.name === 'Name your opponent') {
+        p.textContent = `POTATE DOE #${potatoObject.id - 2}`;
+    } else {
+        p.textContent = `${potatoObject.name}`.toUpperCase();
+    }
     //create image
     const img = document.createElement('img');
     img.src = './assets/potato.png';
