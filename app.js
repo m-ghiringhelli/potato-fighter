@@ -12,14 +12,14 @@ const fighterImageEl = document.getElementById('fighter');
 // let state
 let potatoList = [
     {
-        id: 1,
+        id: 10,
         name: 'Papa Cabeza',
         hp: 1
     },
     {
         id: 2,
         name: 'Frau Kartoffelkopf',
-        hp: 1
+        hp: 12
     }
 ];
 let playerHP = 10;
