@@ -83,6 +83,7 @@ function createPotatoObject() {
     };
     potatoIds++;
     potatoList.push(potato);
+    form.reset();
 }
 
 function potatoClickHandler(poData) {
