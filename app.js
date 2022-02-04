@@ -93,8 +93,9 @@ function potatoClickHandler(poData) {
     }
     // you try to hit potato
     if (Math.random() < 0.7) {
-        alert(`You mashed ${poData.name}!`);
-        poData.hp -= Math.ceil(Math.random() * 4);
+        const hit = Math.ceil(Math.random() * 4);
+        poData.hp -= hit;
+        alert(`You mashed ${poData.name} for ${hit} HP!`);
         displayPotatoes();
     } else alert(`You missed ${poData.name}!`);
     // potato tries to hit you
