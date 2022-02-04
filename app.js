@@ -24,20 +24,24 @@ let potatoList = [
 let playerHP = 10;
 let frenchFriedPotatoes = 0;
 let potatoIds = 3;
-//display player HP
+// display player HP
 playerHPEl.textContent = playerHP;
-//appends potato object
-function displayPotatoes(potatoObject) {
-    potatoContainer.append(renderPotato(potatoObject));
-}
-//display starting potatoes
-for (let potato of potatoList) {
-    displayPotatoes(potato);
-}
-//display number of defeated potatoes
+// display number of defeated potatoes
 defeatedPotatoesEl.textContent = `You've french-fried ${frenchFriedPotatoes} potatoes!`;
-
-// set event listeners
+// displays potato array
+function displayPotatoes() {
+    potatoContainer.textContent = '';
+    for (let potato of potatoList) {
+        // create DOM element
+        const potatoEl = renderPotato(potato);
+        // create event listener
+        potatoEl.addEventListener('click', () => {
+            potatoClickHandler(potato);
+        });
+        // append DOM element
+        potatoContainer.append(potatoEl,);
+    }
+}
 // on user click, input clears
 potatoInput.addEventListener('click', () => {
     potatoInput.value = '';
@@ -46,14 +50,18 @@ potatoInput.addEventListener('click', () => {
 createPotatoEl.addEventListener('submit', (e) => {
     e.preventDefault();
     // createPotatoObject();
-    displayPotatoes(createPotatoObject());
+    createPotatoObject();
+    displayPotatoes();
 });
 // on div click creates potato
 createPotatoEl.addEventListener('click', (e) => {
-    divCreatesPotatoObject(e);
-    // displayPotatoes(createPotatoObject());
+    e.preventDefault();
+    if (e.target === e.currentTarget) {
+        createPotatoObject();
+        displayPotatoes();
+    }
 });
-
+// creates potato and appends to potatoList
 function createPotatoObject() {
     const formData = new FormData(form);
     const potato = {
@@ -62,17 +70,7 @@ function createPotatoObject() {
         hp: Math.ceil(Math.random() * 20),
     };
     potatoIds++;
-    return potato;
-}
-// clicking in div (but not input) creates potato
-function divCreatesPotatoObject(e) {
-    e.preventDefault();
-    if (e.target === e.currentTarget) {
-        createPotatoObject();
-        displayPotatoes(createPotatoObject());
-    }
+    potatoList.push(potato);
 }
 
-  // get user input
-  // use user input to update state 
-  // update DOM to reflect the new state
+displayPotatoes();

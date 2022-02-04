@@ -44,8 +44,8 @@ III) Events
   A) Create potato (form)
     1) renderPotatoes CHECK
       a) create div formatted like potato CHECK
-    2) displayPotatoes()
-      b) append to DOM
+    2) displayPotatoes() CHECK
+      b) append to DOM CHECK
   B) Click on potato (potatoClickHandler())
     1) You try to hit potato
       a) Math.random to see if you hit
@@ -67,13 +67,13 @@ III) Events
       b) alert user (you lost)
 IV) Functionality
   A) renderPotato(potato) - PURE - returns DOM potato CHECK
-  B) displayPotatoes() - clear DOM and append potatoes to potato list
+  B) displayPotatoes() - clear DOM and append potatoes to potato list CHECK
   C) potatoClickHandler() function
 V) Plan
   A) Basic HTML structure CHECK
   B) Style just enough to see layout CHECK
   C) test renderPotato function CHECK
-  D) displayPotatoes function
+  D) displayPotatoes function CHECK
   E) potato click handler
   F) Finish styling
 
