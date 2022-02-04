@@ -7,13 +7,14 @@ const potatoInput = document.getElementById('potato-opponent-input');
 const potatoContainer = document.getElementById('potatoes-container');
 const defeatedPotatoesEl = document.getElementById('defeated-potatoes-display');
 const createPotatoEl = document.getElementById('create-potato-container');
+const fighterImageEl = document.getElementById('fighter');
 
 // let state
 let potatoList = [
     {
         id: 1,
         name: 'Papa Cabeza',
-        hp: 10
+        hp: 1
     },
     {
         id: 2,
@@ -21,7 +22,7 @@ let potatoList = [
         hp: 12
     }
 ];
-let playerHP = 10;
+let playerHP = 1;
 let frenchFriedPotatoes = 0;
 let potatoIds = 3;
 // display player HP
@@ -74,26 +75,32 @@ function createPotatoObject() {
 }
 
 function potatoClickHandler(poData) {
-// you try to hit potato
+    // you try to hit potato
     if (Math.random() < 0.7) {
         alert(`You mashed ${poData.name}!`);
         poData.hp -= Math.ceil(Math.random() * 4);
+        console.log(poData.hp);
     } else alert(`You missed ${poData.name}!`);
-    // If hit, change potato HP state
-    // On miss, alert user
-// potato tries to hit you
-    // Math.random to see if potato hits
-    // Display (alert) whether potato hits
-    // If hit, change user HP state
-    // On miss, alert user
-// Potato dies (if HP reaches 0)
-    // Alert user potato is dead
+    // potato tries to hit you
+    if (Math.random() < 0.5) {
+        alert(`${poData.name} got you good!`);
+        playerHP--;
+        console.log(playerHP);
+    } else {
+        alert(`${poData.name} missed!`);
+    }
+    // Potato dies (if HP reaches 0)
+    if (poData.hp < 1) {
+        alert(`You've french-fried ${poData.name}! Somebody tell the family.`);
+        frenchFriedPotatoes++;
+    }
     // Make potato die (disapper?), show french fries
-    // Update defeated potato state
     // Change display of defeated potatoes
-// User dies (hp === 0) 
-    // Rotate image
-    // Alert user (you lost)
+    // User dies (hp === 0)
+    if (playerHP < 1) {
+        fighterImageEl.className = 'dead';
+        alert('You dead!');
+    }
 }
 
 displayPotatoes();

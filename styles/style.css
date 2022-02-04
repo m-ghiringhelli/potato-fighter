@@ -179,6 +179,10 @@ h2 {
     font-weight: bold;
 }
 
+.dead {
+    transform: rotate(270deg);
+}
+
 .gutter-right {
     margin-right: 20px;
 }
