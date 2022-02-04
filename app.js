@@ -35,6 +35,9 @@ function displayPotatoes() {
     for (let potato of potatoList) {
         // create DOM element
         const potatoEl = renderPotato(potato);
+        if (potato.hp < 1) {
+            potatoEl.childNodes[1].src = './assets/fries.png';
+        }
         // create event listener
         potatoEl.addEventListener('click', () => {
             potatoClickHandler(potato);
@@ -75,6 +78,7 @@ function createPotatoObject() {
 }
 
 function potatoClickHandler(poData) {
+    if (poData.hp < 0) return;
     // you try to hit potato
     if (Math.random() < 0.7) {
         alert(`You mashed ${poData.name}!`);
@@ -86,7 +90,6 @@ function potatoClickHandler(poData) {
         alert(`${poData.name} got you good!`);
         playerHP--;
         playerHPEl.textContent = playerHP;
-        console.log(playerHP);
     } else {
         alert(`${poData.name} missed!`);
     }
