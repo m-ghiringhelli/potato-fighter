@@ -19,7 +19,7 @@ let potatoList = [
     {
         id: 2,
         name: 'Frau Kartoffelkopf',
-        hp: 12
+        hp: 1
     }
 ];
 let playerHP = 10;
@@ -46,6 +46,7 @@ function displayPotatoes() {
         // append DOM element
         potatoContainer.append(potatoEl,);
     }
+    console.log('french-fried', frenchFriedPotatoes, 'potatoIds', potatoIds);
 }
 // on user click, input clears
 potatoInput.addEventListener('click', () => {
@@ -80,6 +81,7 @@ function createPotatoObject() {
 
 function potatoClickHandler(poData) {
     if (poData.hp < 1) return;
+    if ((frenchFriedPotatoes) === (potatoIds - 1)) return;
     // you try to hit potato
     if (Math.random() < 0.7) {
         alert(`You mashed ${poData.name}!`);
@@ -99,13 +101,16 @@ function potatoClickHandler(poData) {
         alert(`You've french-fried ${poData.name}! Somebody tell the family.`);
         frenchFriedPotatoes++;
         defeatedPotatoesEl.textContent = `You've french-fried ${frenchFriedPotatoes} potatoes!`;
+        if ((frenchFriedPotatoes) === (potatoIds - 1)) alert(`You've killed them all, you animal. I hope you're happy with yourself. I guess YOU "WIN"`);
     }
     // Change display of defeated potatoes
     // User dies (hp === 0)
     if (playerHP < 1) {
         fighterImageEl.className = 'dead';
-        alert('You dead!');
+        alert('You dead! GAME OVER');
     }
 }
+
+
 
 displayPotatoes();
