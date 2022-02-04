@@ -14,7 +14,7 @@ let potatoList = [
     {
         id: 1,
         name: 'Papa Cabeza',
-        hp: 10
+        hp: 1
     },
     {
         id: 2,
@@ -94,6 +94,7 @@ function potatoClickHandler(poData) {
     if (poData.hp < 1) {
         alert(`You've french-fried ${poData.name}! Somebody tell the family.`);
         frenchFriedPotatoes++;
+        defeatedPotatoesEl.textContent = `You've french-fried ${frenchFriedPotatoes} potatoes!`;
     }
     // Make potato die (disapper?), show french fries
     // Change display of defeated potatoes
