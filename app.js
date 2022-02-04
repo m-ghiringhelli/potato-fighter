@@ -25,6 +25,8 @@ let potatoList = [
 let playerHP = 10;
 let frenchFriedPotatoes = 0;
 let potatoIds = 3;
+let gameOver = false;
+console.log(gameOver);
 // display player HP
 playerHPEl.textContent = playerHP;
 // display number of defeated potatoes
@@ -46,7 +48,6 @@ function displayPotatoes() {
         // append DOM element
         potatoContainer.append(potatoEl,);
     }
-    console.log('french-fried', frenchFriedPotatoes, 'potatoIds', potatoIds);
 }
 // on user click, input clears
 potatoInput.addEventListener('click', () => {
@@ -55,6 +56,7 @@ potatoInput.addEventListener('click', () => {
 // on form submit creates potato
 createPotatoEl.addEventListener('submit', (e) => {
     e.preventDefault();
+    if (gameOver) return;
     // createPotatoObject();
     createPotatoObject();
     displayPotatoes();
@@ -62,6 +64,7 @@ createPotatoEl.addEventListener('submit', (e) => {
 // on div click creates potato
 createPotatoEl.addEventListener('click', (e) => {
     e.preventDefault();
+    if (gameOver) return;
     if (e.target === e.currentTarget) {
         createPotatoObject();
         displayPotatoes();
@@ -69,6 +72,7 @@ createPotatoEl.addEventListener('click', (e) => {
 });
 // creates potato and appends to potatoList
 function createPotatoObject() {
+    if (gameOver) return;
     const formData = new FormData(form);
     const potato = {
         id: potatoIds,
@@ -80,8 +84,10 @@ function createPotatoObject() {
 }
 
 function potatoClickHandler(poData) {
-    if (poData.hp < 1) return;
-    if ((frenchFriedPotatoes) === (potatoIds - 1)) return;
+    if (poData.hp < 1) {
+        alert(`They're already dead!`);
+        return;
+    }
     // you try to hit potato
     if (Math.random() < 0.7) {
         alert(`You mashed ${poData.name}!`);
@@ -109,8 +115,7 @@ function potatoClickHandler(poData) {
         fighterImageEl.className = 'dead';
         alert('You dead! GAME OVER');
     }
+    if (playerHP === 0 || frenchFriedPotatoes === (potatoIds - 1)) gameOver = true;
 }
-
-
 
 displayPotatoes();
