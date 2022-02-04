@@ -14,7 +14,7 @@ let potatoList = [
     {
         id: 1,
         name: 'Papa Cabeza',
-        hp: 1
+        hp: 10
     },
     {
         id: 2,
@@ -22,7 +22,7 @@ let potatoList = [
         hp: 12
     }
 ];
-let playerHP = 1;
+let playerHP = 10;
 let frenchFriedPotatoes = 0;
 let potatoIds = 3;
 // display player HP
@@ -79,12 +79,13 @@ function potatoClickHandler(poData) {
     if (Math.random() < 0.7) {
         alert(`You mashed ${poData.name}!`);
         poData.hp -= Math.ceil(Math.random() * 4);
-        console.log(poData.hp);
+        displayPotatoes();
     } else alert(`You missed ${poData.name}!`);
     // potato tries to hit you
     if (Math.random() < 0.5) {
         alert(`${poData.name} got you good!`);
         playerHP--;
+        playerHPEl.textContent = playerHP;
         console.log(playerHP);
     } else {
         alert(`${poData.name} missed!`);

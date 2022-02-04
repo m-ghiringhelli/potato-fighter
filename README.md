@@ -46,18 +46,18 @@ III) Events
       a) create div formatted like potato CHECK
     2) displayPotatoes() CHECK
       b) append to DOM CHECK
-  B) Click on potato (potatoClickHandler())
-    1) You try to hit potato
-      a) Math.random to see if you hit
-      b) Display (alert) whether you hit
-      c) If hit, change potato HP state
-      d) On miss, alert user
-    2) Potato tries to hit you
-      a) Math.random to see if potato hits
-      b) Display (alert) whether potato hit
-      c) If hit, change user HP state
-      d) On miss, alert user
-    3) Potato dies (if HP reaches 0)
+  B) Click on potato (potatoClickHandler()) CHECK
+    1) You try to hit potato CHECK
+      a) Math.random to see if you hit CHECK 
+      b) Display (alert) whether you hit CHECK
+      c) If hit, change potato HP state CHECK
+      d) On miss, alert user CHECK
+    2) Potato tries to hit you CHECK
+      a) Math.random to see if potato hits CHECK
+      b) Display (alert) whether potato hit CHECK
+      c) If hit, change user HP state CHECK
+      d) On miss, alert user CHECK
+    3) Potato dies (if HP reaches 0) CHECK
       a) Alert user potato is dead
       b) Make potato die (disappear - display: none?), show french fries
       c) Update defeated potatoes state
@@ -68,13 +68,13 @@ III) Events
 IV) Functionality
   A) renderPotato(potato) - PURE - returns DOM potato CHECK
   B) displayPotatoes() - clear DOM and append potatoes to potato list CHECK
-  C) potatoClickHandler() function
+  C) potatoClickHandler() function CHECK
 V) Plan
   A) Basic HTML structure CHECK
   B) Style just enough to see layout CHECK
   C) test renderPotato function CHECK
   D) displayPotatoes function CHECK
-  E) potato click handler
+  E) potato click handler CHECK
   F) Finish styling
 
 1) **Make a drawing of your app. Simple "wireframes"**
