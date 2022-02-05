@@ -87,7 +87,11 @@ function createPotatoObject() {
 }
 
 function potatoClickHandler(poData) {
-    fighterImageEl.classList.remove('hit');
+    // fighterImageEl.classList.remove('hit');
+    const els = document.getElementsByClassName('hit');
+    while (els[0]) {
+        els[0].classList.remove('hit');
+    }
     if (poData.hp < 1) {
         alert(`They're already dead!`);
         return;
@@ -99,7 +103,7 @@ function potatoClickHandler(poData) {
         alert(`You mashed ${poData.name} for ${hit} HP!`);
         displayPotatoes();
         const potatoHitEl = document.getElementById(`potato-${poData.id}`);
-        potatoHitEl.classList.add('hit');
+        potatoHitEl.childNodes[1].classList.add('hit');
     } else alert(`You missed ${poData.name}!`);
     // potato tries to hit you
     if (Math.random() < 0.5) {
