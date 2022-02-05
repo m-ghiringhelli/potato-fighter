@@ -8,6 +8,7 @@ const potatoContainer = document.getElementById('potatoes-container');
 const defeatedPotatoesEl = document.getElementById('defeated-potatoes-display');
 const createPotatoEl = document.getElementById('create-potato-container');
 const fighterImageEl = document.getElementById('fighter');
+const hitSound = new Audio('./assets/hit.wav');
 
 // let state
 let potatoList = [
@@ -99,11 +100,12 @@ function potatoClickHandler(poData) {
     // you try to hit potato
     if (Math.random() < 0.7) {
         const hit = Math.ceil(Math.random() * 4);
-        poData.hp -= hit;
         alert(`You mashed ${poData.name} for ${hit} HP!`);
+        poData.hp -= hit;
         displayPotatoes();
         const potatoHitEl = document.getElementById(`potato-${poData.id}`);
         potatoHitEl.childNodes[1].classList.add('hit');
+        hitSound.play();
     } else alert(`You missed ${poData.name}!`);
     // potato tries to hit you
     if (Math.random() < 0.5) {
@@ -111,6 +113,7 @@ function potatoClickHandler(poData) {
         fighterImageEl.classList = 'hit';
         playerHP--;
         playerHPEl.textContent = playerHP;
+        hitSound.play();
     } else {
         alert(`${poData.name} missed!`);
     }
