@@ -9,6 +9,7 @@ const defeatedPotatoesEl = document.getElementById('defeated-potatoes-display');
 const createPotatoEl = document.getElementById('create-potato-container');
 const fighterImageEl = document.getElementById('fighter');
 const hitSound = new Audio('./assets/hit.wav');
+const deathSound = new Audio('./assets/death.wav');
 
 // let state
 let potatoList = [
@@ -119,6 +120,7 @@ function potatoClickHandler(poData) {
     }
     // Potato dies (if HP reaches 0)
     if (poData.hp < 1) {
+        deathSound.play();
         alert(`You've french-fried ${poData.name}! Somebody tell the family.`);
         frenchFriedPotatoes++;
         defeatedPotatoesEl.textContent = `You've french-fried ${frenchFriedPotatoes} potatoes!`;
