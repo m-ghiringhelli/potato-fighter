@@ -135,6 +135,17 @@ input {
     height: 90%;
 }
 
+.hit {
+    position: relative;
+    animation: mymove 0.15s 1;
+}
+
+@keyframes mymove {
+    0%   {top: 0px;}
+    60%  {top: -40px;}
+    100% {top: 0px;}
+}
+
 #potatoes-container {
     height: 95%;
     margin: 0px 50px;
