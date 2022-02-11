@@ -1,34 +1,15 @@
 
 body {
     /* feel free to update these css variables for a quick theme */
-    
-    --color1: white;
-    --color2: white;
-    --color3: white;
-    --color4: white;
-    --color5: white;
-    
-    /* https://coolors.co/generate and click export -> scss to get the colors to copy and paste below*/
-        
-    /* --color1: hsla(349, 69%, 76%, 1);
-    --color2: hsla(207, 67%, 44%, 1);
-    --color3: hsla(200, 61%, 56%, 1);
-    --color4: hsla(187, 41%, 94%, 1);
-    --color5: hsla(170, 28%, 95%, 1); */
-
-    /* --color1: hsla(45, 86%, 83%, 1);
-    --color2: hsla(135, 65%, 98%, 1);
-    --color3: hsla(315, 37%, 86%, 1);
-    --color4: hsla(45, 73%, 98%, 1);
-    --color5: hsla(224, 40%, 79%, 1); */
-    
     --header-height: 80px;
     --shadow: 0px 10px 20px -12px rgba(0,0,0,0.45);
     --gutter: 30px;
     --footer-height: 25px;
     
-    font-family: 'Titillium Web', sans-serif;
+    font-family: 'Nunito', sans-serif;
     background-color: var(--color2);
+    background: url("../assets/kitchen.jpg");
+    background-size: cover;
 }
 
 main {
@@ -36,56 +17,195 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-bottom: calc(var(--footer-height));
+    width: 100%;
+    color: white;
 }
 
-section {
-    background-color: var(--color5);
-    max-width: 80%;
+p {
+    padding: 0px;
+    margin: 0px;
+}
+
+.banner {
+    width: 80%;
+    height: 100px;
+    padding: 0px;
+    margin: 20px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    font-family: "Yellowtail", sans-serif;
+    background-color: hsla(250, 20%, 40%, .9);
+    border: 7px white solid;
+    border-radius: 15px;
+}
+
+#above-battle {
+    width: 100%;
+    height: 150px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px;
+}
+
+#user-hp-container {
+    border: solid 1px grey;
+    height: 90%;
+    width: 20%;
+    background-color: hsl(30, 30%, 70%);
+    margin: 0px 20px 0px 60px;
+    border: 3px solid white;
+    font-size: 2rem;
+    color: hsl(250, 20%, 99%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+#player-HP {
+    font-size: 3.2rem;
+}
+
+#create-potato-container {
+    height: 90%;
+    width: 20%;
+    background-color: hsl(30, 67%, 50%);
+    border: solid 1px hsl(0, 0%, 90%);
+    border-radius: 10px;
+    margin: 0px 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-top: var(--gutter);
-    padding-bottom: var(--gutter);
-    margin-top: var(--gutter);
-    margin-bottom: var(--gutter);
-    border: solid 2px var(--color1);
+    font-size: 1.2rem;
+    cursor: pointer;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5);
+    position: relative;
 }
 
-header {
+#create-potato-container:active {
+    top: 2px;
+    left: 1px;
+    box-shadow: none;
+}
+
+#create-potato-container p {
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+form {
+    width: 100%;
     display: flex;
-    justify-content: flex-end;
-    background-color: var(--color3);
-    height: var(--header-height);
-    box-shadow: var(--shadow);
+    justify-content: center;
 }
 
+input {
+    width: 90%;
+    height: 50px;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    border: 1px solid lightgray;
+}
+
+.field-of-battle {
+    height: 400px;
+    width: 100%;
+    margin: 0px;
+    border: 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#fighter {
+    width: 200px;
+    height: 95%;
+    margin: 0px 100px;
+    display: flex;
+    align-items: flex-end;
+}
+
+#chef-image {
+    transform: scaleX(-1);
+    height: 90%;
+}
+
+.hit {
+    position: relative;
+    animation: mymove 0.15s 1;
+}
+
+@keyframes mymove {
+    0%   {top: 0px;}
+    60%  {top: -40px;}
+    100% {top: 0px;}
+}
+
+#potatoes-container {
+    height: 95%;
+    margin: 0px 50px;
+    display: flex;
+    align-items: flex-end;
+    overflow: auto;
+}
+
+.potato {
+    background-color: silver;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    height: 250px;
+    width: 210px;
+    padding: 10px 0px;
+    margin: 0px 5px 2px 5px;
+    border: outset 3px;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5);
+    position: relative;
+    margin-top: 10px;
+}
+
+.potato:active {
+    top: 2px;
+    left: 1px;
+    box-shadow: none;
+}
+
+.potato-picture {
+    height: 150px;
+    width: 100px;
+    padding: 20px 0px;
+    transform: scaleX(-1);
+}
 
 h2 {
     font-size: 1.8rem;
     font-weight: bold;
 }
 
+#defeated-potatoes {
+    background-color: hsla(250, 20%, 40%, .8);
+    font-size: 2rem;
+    font-weight: bold;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    border-radius: 20px;
+    border: 2px solid white;
+}
+
+.dead {
+    transform: rotate(270deg);
+}
+
 .gutter-right {
     margin-right: 20px;
-}
-
-header img {
-    height: var(--header-height);
-}
-
-p {
-    margin: var(--gutter);
-}
-  
-footer {
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-    height: var(--footer-height);
-    display: flex;
-    justify-content: flex-end;
-    background-color: var(--color3);
-    box-shadow: var(--shadow);
 }

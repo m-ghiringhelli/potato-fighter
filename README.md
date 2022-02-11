@@ -6,6 +6,77 @@ If you work on more than one feature at a time, you are guaranteed to multiply y
 
 ## Making a plan
 
+I) Elements
+  A) Banner div CHECK
+  div CHECK
+    B) HP display div CHECK
+      1) p - "fighter hp" CHECK
+      2) p - hp.textContent
+    C) Create potato div  CHECK
+      1) form CHECK
+      2) submit on click
+  div 'field of battle' CHECK
+    D) Fighter image CHECK
+    E) Div for potatoes CHECK
+      1) Individual potato div CHECK
+        a) Potato image CHECK
+        b) Potato name CHECK
+          -Papa Cabeza CHECK
+        c) Potato HP 
+      2) Individual div CHECK
+        a) Potato image CHECK
+        b) Potato name CHECK
+          -Frau Kartoffelkopf CHECK
+        c) Potato HP
+      3) Dynamic div (created w/ js)
+        a) Potato image
+        b) Potato name
+          -from form
+        c) Potato HP
+  F) Defeated div
+    1) text 'you've french fried ${defeated potatoes} potatoes' CHECK
+II) State
+  A) Player HP CHECK
+  B) Defeated potatoes CHECK
+  C) Potato HP CHECK
+  D) Array of potato objects CHECK
+III) Events
+  A) Create potato (form)
+    1) renderPotatoes CHECK
+      a) create div formatted like potato CHECK
+    2) displayPotatoes() CHECK
+      b) append to DOM CHECK
+  B) Click on potato (potatoClickHandler()) CHECK
+    1) You try to hit potato CHECK
+      a) Math.random to see if you hit CHECK 
+      b) Display (alert) whether you hit CHECK
+      c) If hit, change potato HP state CHECK
+      d) On miss, alert user CHECK
+    2) Potato tries to hit you CHECK
+      a) Math.random to see if potato hits CHECK
+      b) Display (alert) whether potato hit CHECK
+      c) If hit, change user HP state CHECK
+      d) On miss, alert user CHECK
+    3) Potato dies (if HP reaches 0) CHECK
+      a) Alert user potato is dead
+      b) Make potato die (disappear - display: none?), show french fries
+      c) Update defeated potatoes state
+      d) Change display of defeated potatoes
+    4) User dies (hp === 0)
+      a) new image? or just rotate
+      b) alert user (you lost)
+IV) Functionality
+  A) renderPotato(potato) - PURE - returns DOM potato CHECK
+  B) displayPotatoes() - clear DOM and append potatoes to potato list CHECK
+  C) potatoClickHandler() function CHECK
+V) Plan
+  A) Basic HTML structure CHECK
+  B) Style just enough to see layout CHECK
+  C) test renderPotato function CHECK
+  D) displayPotatoes function CHECK
+  E) potato click handler CHECK
+  F) Finish styling
+
 1) **Make a drawing of your app. Simple "wireframes"**
 1) **Once you have a drawing, name the HTML elements you'll need to realize your vision**
 1) **For each HTML element ask: Why do I need this? (i.e., "we need div to display the results in")** 
